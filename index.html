@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobGuard AI — AI Job-Scam Checker</title>
+  <script type="module" crossorigin src="./assets/index-Dg1Yu-ie.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B7TbAi5f.css">
+</head>
+<body>
+  <h1>🛡️ JobGuard AI</h1>
+  <p class="subtitle">Paste any job advertisement. AI checks it for scam red flags — in seconds.</p>
+
+  <div id="demoBanner" class="banner" hidden>
+    <strong>DEMO MODE — no live AI yet.</strong>
+    Checks below run on transparent local rules (not Gemini). Your pasted text
+    never leaves this page. To enable live AI, connect Firebase AI Logic —
+    see <code>NOTES.md → “Going live”</code>.
+  </div>
+
+  <label for="jobAd">Job advertisement</label><br>
+  <textarea id="jobAd" placeholder="Paste the full job ad text here..."></textarea>
+
+  <div class="row">
+    <button id="checkBtn" class="btn primary">Check this job ad</button>
+    <button id="sampleScamBtn" type="button" class="btn secondary">Try a scam example</button>
+    <button id="sampleRealBtn" type="button" class="btn secondary">Try a real example</button>
+    <button id="clearBtn" type="button" class="btn secondary">Clear</button>
+  </div>
+
+  <div class="row">
+    <label for="modeSelect" class="small muted">Engine:</label>
+    <select id="modeSelect">
+      <option value="auto">Auto (live AI if configured, else demo)</option>
+      <option value="live">Live AI only</option>
+      <option value="demo">Demo rules only</option>
+    </select>
+    <span id="modeNote" class="small muted"></span>
+  </div>
+
+  <p id="count" class="muted small"></p>
+  <p id="hint" class="muted small hint"></p>
+  <p id="status" class="status"></p>
+
+  <div id="result" hidden></div>
+
+  <footer>
+    <p class="small muted"><span id="appcheckNote"></span></p>
+    <p class="small muted">Disclaimer: JobGuard AI is a screening aid, not legal or financial
+    advice. Always verify the employer independently before sharing personal
+    data or paying anything. Pasted ads are never stored or uploaded in demo
+    mode; in live mode they are sent only to Google's Gemini API via Firebase
+    AI Logic to produce the verdict.</p>
+    <p class="small muted">JobGuard AI — SLAY HACKS 2026. Built by Sandi Supriatna (solo).</p>
+  </footer>
+
+</body>
+</html>
