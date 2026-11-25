@@ -1,0 +1,1 @@
+{"dependencies":{"firebase":"^13.0.0"},"description":"JobGuard AI — paste a job ad, get an AI verdict on scam red flags. SLAY HACKS 2026.","devDependencies":{"vite":"^6.0.0"},"license":"MIT","name":"jobguard-ai","private":true,"scripts":{"build":"vite build","dev":"vite","preview":"vite preview"},"type":"module","version":"0.1.0"}
